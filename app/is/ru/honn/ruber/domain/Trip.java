@@ -9,6 +9,7 @@ public class Trip
   protected double distance;
   protected long startTime;
   protected long endTime;
+  protected int driverID;
 
   public Trip()
   {
@@ -27,16 +28,24 @@ public class Trip
   }
 
   public Trip(long requestTime, int productId, TripStatus status, double distance, long startTime, long endTime)
-  {
+{
     this.requestTime = requestTime;
     this.productId = productId;
     this.status = status;
     this.distance = distance;
     this.startTime = startTime;
     this.endTime = endTime;
-  }
+}
 
-  public int getId()
+    public int getDriverID() {
+        return driverID;
+    }
+
+    public void setDriverID(int driverID) {
+        this.driverID = driverID;
+    }
+
+    public int getId()
   {
     return id;
   }

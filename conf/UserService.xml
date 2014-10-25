@@ -28,5 +28,4 @@
         <constructor-arg index="0" ref="userDataGateway"/>
     </bean>
 
-
 </beans>

@@ -1,0 +1,14 @@
+@(trips: List[is.ru.honn.ruber.domain.TripDTO])
+
+<h1>Trips</h1>
+
+<table>
+    @for(trip <- trips) {
+        <tr>
+            <td>@trip.getDriver<td>
+            <td>@trip.getLength<td>
+            <td>@trip.getDate<td>
+            <td>@trip.getMinutes<td>
+        </tr>
+    }
+</table>
