@@ -1,7 +1,6 @@
 package controllers;
 
 
-import is.ru.honn.ruber.domain.Trip;
 import is.ru.honn.ruber.domain.TripDTO;
 import is.ru.honn.ruber.users.service.UserService;
 import org.springframework.context.ApplicationContext;
@@ -16,10 +15,10 @@ public class UserController extends Controller
 {
   protected static ApplicationContext ctx = new FileSystemXmlApplicationContext("/conf/UserService.xml");
 
-  public static Result getTrips(int i)
+  public static Result getTrips(int userID)
   {
       UserService userService = (UserService)ctx.getBean("userService");
-      List<TripDTO> tripList = userService.getTrips(i);
+      List<TripDTO> tripList = userService.getTrips(userID);
 
       return ok(trips.render(tripList));
   }

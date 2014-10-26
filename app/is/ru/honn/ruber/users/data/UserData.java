@@ -1,6 +1,7 @@
 package is.ru.honn.ruber.users.data;
 
 import is.ru.honn.ruber.domain.*;
+import is.ru.honn.ruber.drivers.data.DriverRowMapper;
 import is.ru.honn.ruber.users.service.UserNotFoundException;
 import is.ru.honn.ruber.users.service.UsernameExistsException;
 import is.ruframework.data.RuData;

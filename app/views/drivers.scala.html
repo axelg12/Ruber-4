@@ -1,0 +1,20 @@
+@(drivers: List[is.ru.honn.ruber.domain.DriverDTO])
+
+<h1>Trips</h1>
+
+<table>
+    <tr>
+        <th>Driver Name</th>
+        <th>Description</th>
+        <th>Capacity</th>
+        <th>Name</th>
+    </tr>
+    @for(driver <- drivers) {
+        <tr>
+            <td><a href="/driver/@driver.getDriver.getDriverID">@driver.getDriver.getDriverName</a></td>
+            <td>@driver.getProduct.getDescription</td>
+            <td>@driver.getProduct.getCapacity</td>
+            <td>@driver.getProduct.getDisplay_name</td>
+        </tr>
+    }
+</table>

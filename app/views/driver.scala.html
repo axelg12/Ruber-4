@@ -1,0 +1,7 @@
+@(driver: is.ru.honn.ruber.domain.DriverDTO, comments: List[is.ru.honn.ruber.domain.Rating])
+
+
+<h2>@driver.getDriver.getDriverName</h2>
+@for(comment <- comments){
+    <p>@comment.getComment</p>
+}
